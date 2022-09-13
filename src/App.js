@@ -1,8 +1,10 @@
-import { Link, Route, Routes } from "react-router-dom";
-import UseEffectPage from "./pages/UseEffectPage";
-import UseReducerPage from "./pages/UseReducerPage";
-import UseRefPage from "./pages/UseRefPage";
-import UseStatePage from "./pages/UseStatePage";
+import { Link, Route, Routes } from 'react-router-dom';
+import UseCallbackPage from './pages/UseCallBackPage';
+import UseEffectPage from './pages/UseEffectPage';
+import UseMemoPage from './pages/UseMemoPage';
+import UseReducerPage from './pages/UseReducerPage';
+import UseRefPage from './pages/UseRefPage';
+import UseStatePage from './pages/UseStatePage';
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
           <li>
             <Link to={'/useref'}>Use Ref</Link>
           </li>
+          <li>
+            <Link to={'/usememo'}>Use Memo</Link>
+          </li>
+          <li>
+            <Link to={'/usecallback'}>Use Callback</Link>
+          </li>
         </ol>
       </div>
       <Routes>
@@ -30,6 +38,8 @@ function App() {
         <Route path={'/useeffect'} element={<UseEffectPage />} />
         <Route path={'/usereducer'} element={<UseReducerPage />} />
         <Route path={'/useref'} element={<UseRefPage />} />
+        <Route path={'/usememo'} element={<UseMemoPage />} />
+        {/* <Route path={'/usecallback'} element={<UseCallbackPage />} /> */}
       </Routes>
     </div>
   );

@@ -1,9 +1,7 @@
-import { forwardRef } from "react"
+import { forwardRef } from 'react';
 
 const ForwardRefExample = forwardRef((_props, forwardedRef) => {
-    return (
-        <input ref={forwardedRef} />
-    )
-})
+  return <input ref={forwardedRef} />;
+});
 
-export default ForwardRefExample
+export default ForwardRefExample;
