@@ -1,9 +1,11 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 
 const useRenderCounter = () => {
-    const renderCounter = useRef(0);
+    const renderCounter = useRef(1);
 
-    renderCounter.current = renderCounter.current + 1
+    useEffect(() => {
+        renderCounter.current = renderCounter.current + 1
+    })
 
     return renderCounter.current
 }
